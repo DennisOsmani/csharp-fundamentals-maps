@@ -55,7 +55,7 @@ namespace csharp_fundamentals_maps.Main
         }
         public Dictionary<string, float> OrderedPlanetsByDescending()
         {            
-            return _planets.OrderByDescending(x => x.Key);
+            return _planets.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
         }
         //TODO:  modify the OrderedPlanetsByDescending so it is not dictionary is not doing an OrderBy but OrderByDescending
 
